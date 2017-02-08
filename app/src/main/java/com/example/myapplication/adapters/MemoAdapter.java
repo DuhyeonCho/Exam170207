@@ -1,32 +1,36 @@
 package com.example.myapplication.adapters;
 
-        import android.content.Context;
-        import android.graphics.Color;
-        import android.util.Log;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.BaseAdapter;
-        import android.widget.ImageView;
-        import android.widget.TextView;
+import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-        import com.example.myapplication.R;
-        import com.example.myapplication.models.Weather;
+import com.example.myapplication.MemoActivity;
+import com.example.myapplication.R;
+import com.example.myapplication.models.Weather;
 
-        import java.util.List;
+import java.util.List;
 
 /**
- * Created by junsuk on 2017. 2. 7..
+ * Created by develop on 2017-02-07.
  */
 
-public class WeatherAdapter extends BaseAdapter {
+public class MemoAdapter extends BaseAdapter {
     private static final String TAG = WeatherAdapter.class.getSimpleName();
     private Context mContext;
     private List<Weather> mData;
 
-    public WeatherAdapter(Context context, List<Weather> data) {
+    public MemoAdapter(Context context, List<Weather> data) {
         mContext = context;
         mData = data;
+    }
+
+    public MemoAdapter(MemoActivity context, List<Memo> mMemo) {
     }
 
     // 아이템 갯수
